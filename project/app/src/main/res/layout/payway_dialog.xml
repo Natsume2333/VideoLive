@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_whitle_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#646464"
+            android:text="选择支付方式"
+            android:layout_marginTop="30dp"
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="30dp"
+            android:id="@+id/pay_way_rv"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_whitle_dialog"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#323232"
+        android:text="取消"
+        android:layout_height="50dp" />
+
+
+</LinearLayout>

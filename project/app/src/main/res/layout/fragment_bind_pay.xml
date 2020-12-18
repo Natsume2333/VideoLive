@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="50dp">
+
+<!--        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="持卡人姓名"
+            android:textColor="#646464"
+            android:textSize="14dp" />
+
+
+        <EditText
+            android:id="@+id/bank_account"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="#909090"
+            android:textColor="#323232"
+            android:textSize="14dp"
+            android:hint="请输入持卡人姓名"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兑换账号(支付宝)"
+            android:textColor="#646464"
+            android:textSize="14dp" />
+
+
+        <EditText
+            android:id="@+id/ali"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="#909090"
+            android:textColor="#323232"
+            android:textSize="14dp"
+            android:hint="请输入支付宝账号"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        android:layout_height="50dp">
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#646464"
+            android:text="银行卡卡号"
+            />
+
+
+        <EditText
+            android:id="@+id/bank_cardno"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="#909090"
+            android:textColor="#323232"
+            android:textSize="14dp"
+            android:hint="请输入银行卡卡号"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#646464"
+            android:text="兑换账号(微信)"
+            />
+
+
+        <EditText
+            android:id="@+id/wx"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="#909090"
+            android:textColor="#323232"
+            android:textSize="14dp"
+            android:hint="请输入微信账号"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+<!--    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#646464"
+            android:text="银行卡所属银行"
+            />
+
+
+        <EditText
+            android:id="@+id/bank_name"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="#909090"
+            android:textColor="#323232"
+            android:textSize="14dp"
+            android:hint="请输入银行卡所属银行"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>-->
+<LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#646464"
+            android:text="姓名"
+            />
+
+
+        <EditText
+            android:id="@+id/name"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="#909090"
+            android:textColor="#323232"
+            android:textSize="14dp"
+            android:hint="请输入绑定的姓名"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#646464"
+            android:text="开户行地址"
+            />
+
+
+        <EditText
+            android:id="@+id/bank_addr"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="#909090"
+            android:textColor="#323232"
+            android:textSize="14dp"
+            android:hint="请输入开户行地址"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>-->
+
+<RelativeLayout
+android:background="@color/color_split_line_d9d9d9"
+android:paddingLeft="10dp"
+android:paddingRight="10dp"
+android:layout_width="match_parent"
+android:layout_height="50dp">
+
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14dp"
+    android:textColor="#646464"
+    android:text="默认兑换方式"
+    android:layout_centerVertical="true"
+    />
+
+
+<RadioGroup
+    android:id="@+id/ck"
+    android:orientation="horizontal"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:checked="true"
+        android:id="@+id/ck_zfb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支付宝"
+        />
+
+
+    <RadioButton
+        android:id="@+id/ck_wx"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微信"
+        />
+
+
+</RadioGroup>
+
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/to_drawing"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/black"
+        android:text="确定"
+        android:background="@drawable/bg_guard_bt"
+        />
+
+
+
+
+</LinearLayout>

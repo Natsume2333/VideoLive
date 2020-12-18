@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/show_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/click_r"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="100dp"
+            android:background="@mipmap/share_tab_g"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="海报分享"
+                android:textColor="@color/gray7"
+                android:textSize="12dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/share_tab_w"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="分享链接"
+                android:textColor="@color/admin_color"
+                android:textSize="12dp" />
+
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@color/admin_color" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/show_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/click_l"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/share_tab_g"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="分享链接"
+                android:textColor="@color/gray7"
+                android:textSize="12dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="100dp"
+            android:background="@mipmap/share_tab_w"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="海报分享"
+                android:textColor="@color/admin_color"
+                android:textSize="12dp" />
+
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@color/admin_color" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_invites_dialog"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+
+
+            <com.stx.xhb.xbanner.XBanner
+                android:visibility="gone"
+                android:id="@+id/mSharePagerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/share_poster_rl"
+                android:scaleType="centerCrop"
+                app:isAutoPlay="false"
+                app:isClipChildrenMode="true"
+                app:isClipChildrenModeLessThree="true"
+                app:isHandLoop="false"
+                app:isShowIndicatorOnlyOne="false"
+                app:pointsVisibility="false"
+                app:viewPagerClipChildren="true" />
+
+            <ImageView
+                android:id="@+id/share_card"
+                android:layout_width="202dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/share_url"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/invite_share_border"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/url_icon"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+
+                    <TextView
+                        android:id="@+id/url_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新时代交友平台"
+                        android:textColor="@color/black"
+                        android:textSize="13dp" />
+
+
+                    <TextView
+                        android:id="@+id/url_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="边视频边游戏,交友新方式"
+                        android:textColor="@color/gray"
+                        android:textSize="11dp" />
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/url_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_logo_logo" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.moxin.videoline.ui.dialog.InviteShareView
+            android:id="@+id/share_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

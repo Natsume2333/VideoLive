@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graywhite"
+    tools:context=".ui.CuckooAddCustomMsgActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_bar_rl"
+        style="@style/total_top_bar_rl_style">
+
+        <ImageView
+            android:id="@+id/top_bar_back_iv"
+            style="@style/total_top_bar_iv_style" />
+
+        <TextView
+            android:id="@+id/top_bar_title_tv"
+            style="@style/total_top_bar_tv_style" />
+
+        <TextView
+            android:id="@+id/top_bar_save_tv"
+            style="@style/total_top_bar_tv_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="提交" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/add_custom_msg_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar_rl"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_whitle_tr5"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/add_custom_msg_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="输入话术内容..."
+            android:maxLength="15"
+            android:minHeight="180dp"
+            android:padding="15dp"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/add_custom_msg_et_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_custom_msg_et"
+            android:layout_alignParentRight="true"
+            android:text="0/15"
+            android:textColor="#909090"
+            android:textSize="11dp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_custom_msg_rl"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_whitle_tr5"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="删除话术"
+        android:textColor="#FF0808"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.tencent.qcloud.ui.TemplateTitle
+        android:id="@+id/chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:canBack="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_system_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chat_title"
+        android:background="#fcf5df"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/chat_img_horn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_chat_warning" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/chat_img_horn"
+            android:singleLine="true"
+            android:text="@string/chat_hint"
+            android:textColor="#FC5808"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_input"
+        android:layout_below="@id/rl_system_message"
+        android:background="#f5f5f5"
+        android:divider="@null" />
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/chat_attribute_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_system_message"
+        android:layout_margin="10sp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_ten_corners_bac">
+
+            <TextView
+                android:id="@+id/top_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:text="是否关注对方"
+                android:textColor="@color/gray_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_title_tv"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="关注后可订阅对方动态"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/chat_attribute_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/chat_attribute_close_iv"
+                android:background="@drawable/yellow_fifty_corners_bac"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="关注"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/chat_attribute_close_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_close_gray" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_grayf5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_chat_menu"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_reward"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/im_gift"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_private_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/im_private_photo" />
+
+            <ImageView
+                android:id="@+id/iv_gift"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/im_gift" />
+
+            <ImageView
+                android:id="@+id/iv_video"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/im_video" />
+        </LinearLayout>
+
+        <com.tencent.qcloud.ui.ChatInput
+            android:id="@+id/input_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.tencent.qcloud.ui.VoiceSendingView
+        android:id="@+id/voice_sending"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

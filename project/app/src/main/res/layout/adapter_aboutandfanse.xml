@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginTop="11dp"
+    android:layout_marginRight="11dp"
+    android:background="@drawable/white_ten_corners_bac">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/aboutandans_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@mipmap/holder_noimg" />
+
+    <TextView
+        android:id="@+id/aboutandans_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/aboutandans_img"
+        android:gravity="center"
+        android:maxWidth="160dp"
+        android:text="@string/test_text"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+
+    <com.moxin.videoline.widget.BGLevelTextView
+        android:id="@+id/tv_level"
+        android:layout_width="35dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/aboutandans_text"
+        android:textSize="8dp" />
+
+
+    <TextView
+        android:id="@+id/aboutandfans_loveme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/yellow_white_fifty_corners_bac"
+        android:gravity="center"
+        android:paddingLeft="22dp"
+        android:paddingTop="10dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="10dp"
+        android:text="@string/userinfo_bar_loveme"
+        android:textSize="@dimen/text_size_12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_grayf5" />
+</RelativeLayout>

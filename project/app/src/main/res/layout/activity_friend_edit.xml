@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FriendEditActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/admin_color"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/bast_top_bar_cancel"
+            style="@style/friend_edit_top_bar_tv_style"
+            android:layout_marginLeft="20dp"
+            android:text="取消"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/bast_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="编辑"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/bast_top_bar_save"
+            style="@style/friend_edit_top_bar_tv_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="保存"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar_rl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/friend_add_image_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/friend_edit_tip_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/friend_add_image_rv"
+                android:layout_margin="15dp"
+                android:background="@drawable/grey_ten_corners_bac"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/friend_edit_img_careful" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="尊敬的用户，您上传的头像须遵守相关法律法规和社区规则，请严格遵守相关规定，以免违规。"
+                    android:textColor="#ff323232"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="50dp"
+                android:id="@+id/friend_edit_seekbar_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/friend_edit_tip_ll"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/friend_edit_age_ll_style">
+
+                    <TextView
+                        style="@style/friend_edit_title_style"
+                        android:text="位置" />
+
+
+                    <TextView
+                        android:id="@+id/friend_edit_location_tv"
+                        style="@style/friend_edit_title_style"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/admin_color" />
+
+                </LinearLayout>
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/location_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cellMode="number"
+                    app:lineColorEdge="#ECECEC"
+                    app:lineColorSelected="@color/admin_color"
+                    app:progressHintMode="alwaysHide"
+                    app:seekBarHeight="10dp"
+                    app:seekBarMode="single"
+                    app:thumbSize="20dp" />
+
+
+                <LinearLayout style="@style/friend_edit_age_ll_style">
+
+                    <TextView
+                        style="@style/friend_edit_title_style"
+                        android:text="年龄" />
+
+
+                    <TextView
+                        android:id="@+id/friend_edit_age_tv"
+                        style="@style/friend_edit_title_style"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/admin_color" />
+
+                </LinearLayout>
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/age_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cellMode="number"
+                    app:lineColorEdge="#ECECEC"
+                    app:lineColorSelected="@color/admin_color"
+                    app:progressHintMode="alwaysHide"
+                    app:seekBarHeight="10dp"
+                    app:seekBarMode="range"
+                    app:thumbSize="20dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/friend_edit_hide_momo_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/friend_edit_seekbar_ll"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="屏蔽陌陌好友"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/friend_edit_login_out_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/friend_edit_hide_momo_rl"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出觅友并清除位置信息"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+
+                <ImageView style="@style/persion_arrow_iv_style" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

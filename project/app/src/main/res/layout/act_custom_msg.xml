@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_bar_rl"
+        style="@style/total_top_bar_rl_style">
+
+        <ImageView
+            android:id="@+id/top_bar_back_iv"
+            style="@style/total_top_bar_iv_style" />
+
+        <TextView
+            android:id="@+id/top_bar_title_tv"
+            style="@style/total_top_bar_tv_style" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/content_list_head_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar_rl"
+        android:background="@color/graywhite"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="已添加话术"
+        android:textColor="#ff646464"
+        android:textSize="15sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_content_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_list_head_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/btn_save_custom_msg"
+        android:text="添加话术"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_save_custom_msg"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+</RelativeLayout>

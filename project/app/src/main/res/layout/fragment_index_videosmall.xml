@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/admin_color"
+    android:layout_height="match_parent">
+
+    <com.qmuiteam.qmui.widget.QMUIViewPager
+        android:id="@+id/video_view_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        style="@style/scroll_view"
+        android:layout_below="@+id/tabLayout_video_ll" />
+
+
+    <View
+        style="@style/h_line"
+        android:layout_height="1px"
+        android:layout_below="@+id/video_tab_segment"
+        android:visibility="gone" />
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/video_tab_segment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/tabLayout_video_ll"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.qmuiteam.qmui.widget.QMUITabSegment
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+        ></com.qmuiteam.qmui.widget.QMUITabSegment>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/prize_to_upload"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/produce_video_entrance" />
+    </RelativeLayout>
+
+</RelativeLayout>

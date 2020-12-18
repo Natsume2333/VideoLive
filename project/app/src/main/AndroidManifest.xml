@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.moxin.videoline">
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" /> <!-- 加入应用需要的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 读写文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 多媒体 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 如果需要实时音视频通话模块，下面的权限也是必须的。否则，可以不加 -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!-- 手机状态 -->
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="com.moxin.videoline.CuckooApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/qmuiThemeNoBar"
+        android:usesCleartextTraffic="true">
+
+        <!--TODO 看情况再说-->
+        <activity android:name="com.moxin.videoline.ui.PairingActivity" />
+        <activity android:name="com.moxin.videoline.ui.FriendEditActivity" />
+        <activity android:name="com.moxin.videoline.ui.ContactSettingActivity" />
+        <activity android:name="com.moxin.videoline.ui.FriendsActivity" />
+
+        <!--推广海报-->
+        <activity android:name="com.moxin.videoline.ui.PosterActivity" />
+
+        <!--绑定手机号码-->
+        <activity android:name="com.moxin.videoline.ui.BindPhoneActivity" />
+
+        <!--自定义话术添加-->
+        <activity android:name="com.moxin.videoline.ui.CuckooAddCustomMsgActivity" />
+        <activity android:name="com.moxin.videoline.ui.WealthDetailedActivity" />
+
+        <!-- 入口 -->
+        <activity
+            android:name="com.moxin.videoline.ui.SplashActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="og35az"/>
+            </intent-filter>
+        </activity>
+        <!-- 登录选择页 -->
+        <activity
+            android:name="com.moxin.videoline.ui.RegisterSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 主页 -->
+        <activity
+            android:name="com.moxin.videoline.ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <!-- player主页 -->
+        <activity
+            android:name="com.moxin.videoline.ui.HomePageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 视频播放页面 -->
+        <activity
+            android:name="com.moxin.videoline.ui.VideoPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 发起视频通话 -->
+        <activity
+            android:name="com.moxin.videoline.ui.CallPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 被呼叫页面 -->
+        <activity
+            android:name="com.moxin.videoline.ui.PlayerCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 视频聊天页面 -->
+        <activity
+            android:name="com.moxin.videoline.ui.VideoLineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 举报player页面 -->
+        <activity
+            android:name="com.moxin.videoline.ui.ReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 加盟合作页面 -->
+        <activity
+            android:name="com.moxin.videoline.ui.ToJoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 聊天页面 -->
+        <activity
+            android:name="com.moxin.videoline.msg.ui.MsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 联系人列表页面 -->
+        <activity
+            android:name="com.moxin.videoline.msg.ui.AboutFansActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 编辑资料页面 -->
+        <activity
+            android:name="com.moxin.videoline.ui.EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- H5页面 -->
+        <activity
+            android:name="com.moxin.videoline.ui.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/qmuiTheme" />
+        <!-- 聊天列表页面 -->
+        <activity
+            android:name="com.moxin.videoline.msg.ui.MsgListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moxin.chat.ui.ImageViewActivity"
+            android:screenOrientation="portrait" />
+        <!--图片预览-->
+        <activity
+            android:name="com.moxin.chat.ui.ImagePreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moxin.videoline.ui.PrivateChatActivity"
+            android:screenOrientation="portrait" />
+        <!--私信页面-->
+        <activity
+            android:name="com.moxin.chat.ui.ChatActivity"
+            android:screenOrientation="portrait" />
+        <!--通话结束-->
+        <activity
+            android:name="com.moxin.videoline.ui.VideoLineEndActivity"
+            android:screenOrientation="portrait" />
+        <!--私照管理-->
+        <activity
+            android:name="com.moxin.videoline.ui.PrivatePhotoActivity"
+            android:screenOrientation="portrait" /> <!-- 测试页 -->
+        <!-- ##########################第三方插件声明######################### -->
+        <!-- 高德地图 -->
+        <service android:name="com.amap.api.location.APSService" /> <!-- 测试页 -->
+        <!-- 图片选择界面 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.moxin.videoline.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider> <!-- ##########################声网后台服务，请使用独立进程。######################### -->
+        <!-- ##########################腾讯云通信配置########################## -->
+        <!-- 【必须】消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="true"
+            android:process=":QALSERVICE" />
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" /> <!-- 【必须】 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+
+            <!-- ImSDK 3.0.2 后添加 -->
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.service.TASK_REMOVED" />
+            </intent-filter>
+        </receiver>
+        <!-- ##########################腾讯云通信配置########################## -->
+
+        <!--视频录制-->
+        <activity
+            android:name="com.moxin.videoline.ui.VideoRecordActivity"
+            android:screenOrientation="portrait" />
+        <!--发布短视频-->
+        <activity
+            android:name="com.moxin.videoline.ui.PushShortVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moxin.videoline.ui.PerViewImgActivity"
+            android:screenOrientation="portrait" />
+        <!--视频认证-->
+        <activity
+            android:name="com.moxin.videoline.ui.VideoAuthActivity"
+            android:screenOrientation="portrait" />
+        <!--短视频列表-->
+        <activity
+            android:name="com.moxin.videoline.ui.ShortVideoActivity"
+            android:screenOrientation="portrait" />
+        <!--充值-->
+        <activity
+            android:name="com.moxin.videoline.ui.RechargeActivity"
+            android:screenOrientation="portrait" />
+        <!--钱包-->
+        <activity
+            android:name="com.moxin.videoline.ui.WealthActivity"
+            android:screenOrientation="portrait" />
+        <!--设置-->
+        <activity
+            android:name="com.moxin.videoline.ui.SettingActivity"
+            android:screenOrientation="portrait" />
+        <!--邀请 （废弃）-->
+        <activity
+            android:name="com.moxin.videoline.ui.InviteActivity"
+            android:screenOrientation="portrait" />
+        <!--兑换 （废弃）-->
+        <activity
+            android:name="com.moxin.videoline.ui.UserIncomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moxin.videoline.ui.UserContribuionRankActivity"
+            android:screenOrientation="portrait" />
+        <!--守护排行-->
+        <activity
+            android:name="com.moxin.videoline.ui.UserGuardRankActivity"
+            android:screenOrientation="portrait" />
+        <!--购买守护-->
+        <activity
+            android:name="com.moxin.videoline.ui.UserGuardBuyActivity"
+            android:screenOrientation="portrait" />
+        <!--黑名单列表-->
+        <activity
+            android:name="com.moxin.videoline.ui.BlackListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name="com.moxin.videoline.ui.PerfectRegisterInfoActivity" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent101433675" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.moxin.videoline.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.moxin.videoline.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="@string/wx_app_id" />
+            </intent-filter>
+        </activity>
+        <!--系统消息（废弃）-->
+        <activity
+            android:name="com.moxin.videoline.ui.SystemMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.moxin.videoline.ui.CuckooVideoTouchPlayerActivity" />
+        <!--视频结束评价-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooVideoEndEvaluateActivity"
+            android:theme="@style/transparent_" />
+
+        <!--搜索-->
+        <activity android:name="com.moxin.videoline.ui.CuckooSearchActivity" />
+        <!--排行-->
+        <activity android:name="com.moxin.videoline.ui.CuckooOrderActivity" />
+        <!--认证表单-->
+        <activity android:name="com.moxin.videoline.ui.CuckooAuthFormActivity" />
+        <!--认证昵称-->
+        <activity android:name="com.moxin.videoline.ui.CuckooAuthUserNicknameActivity" />
+        <!--认证图片-->
+        <activity android:name="com.moxin.videoline.ui.CuckooAuthPhoneActivity" />
+        <!--认证编辑内容-->
+        <activity android:name="com.moxin.videoline.ui.CuckooAuthEditBodyActivity" />
+        <!--选择标签-->
+        <activity android:name="com.moxin.videoline.ui.CuckooSelectLabelActivity" />
+        <!--他人资料页-->
+        <activity android:name="com.moxin.videoline.ui.CuckooHomePageActivity" />
+        <!--登录选择-->
+        <activity android:name="com.moxin.videoline.ui.CuckooLoginSelectActivity" />
+        <!--手机登录-->
+        <activity android:name="com.moxin.videoline.ui.CuckooMobileLoginActivity" />
+        <!--拨打列表-->
+        <activity android:name="com.moxin.videoline.ui.CuckooVideoCallListActivity" />
+        <!--动态图预览-->
+        <activity android:name="com.moxin.videoline.ui.DynamicImagePreviewActivity" />
+        <!--动态详情-->
+        <activity
+            android:name="com.moxin.videoline.ui.DynamicDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <!--发布动态-->
+        <activity android:name="com.moxin.videoline.ui.PushDynamicActivity" />
+        <!--音频录制-->
+        <activity
+            android:name="com.moxin.videoline.ui.AudioRecordActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--推荐列表-->
+        <activity
+            android:name="com.moxin.videoline.ui.RecommendActivity"
+            android:screenOrientation="portrait" />
+        <!--订阅-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooSubscribeActivity"
+            android:screenOrientation="portrait" />
+        <!--H5页面弹窗-->
+        <activity
+            android:name="com.moxin.videoline.ui.DialogH5Activity"
+            android:theme="@style/Transparent" />
+        <!--视频接听等待-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooVideoCallWaitActivity"
+            android:screenOrientation="portrait" />
+        <!--音频等待接听-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooVoiceCallActivity"
+            android:screenOrientation="portrait" />
+        <!--图片认证-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooImgAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooGuildCreateActivity"
+            android:screenOrientation="portrait" />
+        <!--公会列表-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooGuildListActivity"
+            android:screenOrientation="portrait" />
+        <!--公会管理 （废弃）-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooGuildManageActivity"
+            android:screenOrientation="portrait" />
+        <!--公会用户管理 （废弃）-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooGuildUserManageActivity"
+            android:screenOrientation="portrait" />
+        <!--公会申请列表 （废弃）-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooGuildApplyListActivity"
+            android:screenOrientation="portrait" />
+        <!--公会修改用户比例 （废弃）-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooChangeUserRatioActivity"
+            android:screenOrientation="portrait" />
+        <!--选择兑换规则 -->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooSelectIncomeLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooGiftCabinetGiftListActivity"
+            android:screenOrientation="portrait" />
+        <!--短视频播放-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooSmallVideoPlayerActivity"
+            android:screenOrientation="portrait" />
+        <!--充值VIP-->
+        <activity
+            android:name="com.moxin.videoline.ui.RechargeVipActivity"
+            android:screenOrientation="portrait" />
+        <!--邀请好友-->
+        <activity
+            android:name="com.moxin.videoline.ui.InviteActivityNew"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.moxin.videoline.ui.ExtensionInfoActvity" />
+        <!--邀请明细-->
+        <activity
+            android:name="com.moxin.videoline.ui.InviteDetailedActivity"
+            android:screenOrientation="portrait" />
+        <!--自定义话术-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooCustomMsgActivity"
+            android:screenOrientation="portrait" />
+        <!--美颜设置-->
+        <activity
+            android:name="com.moxin.videoline.ui.CuckooSettingBeautyActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!--APP 溯源SDK-->
+        <meta-data
+            android:name="com.openinstall.APP_KEY"
+            android:value="a3gu7z" />
+        <meta-data
+            android:name="com.tencent.rdm.uuid"
+            android:value="a2af72ec-a731-46eb-8501-0477e34702f3" />
+        <!-- 高德地图定位 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="@string/amap_key" />
+        <!-- ##########################本项目######################### -->
+
+    </application>
+</manifest>

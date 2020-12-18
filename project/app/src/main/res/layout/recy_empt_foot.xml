@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@drawable/bg_whitle_br5"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:layout_width="187dp"
+            android:layout_height="145dp"
+            android:background="@mipmap/empt_content"
+            />
+
+
+        <TextView
+            android:textSize="15dp"
+            android:textColor="#666666"
+            android:text="暂无内容"
+            android:id="@+id/hint"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

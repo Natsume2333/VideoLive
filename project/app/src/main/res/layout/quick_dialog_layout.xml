@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@drawable/bg_whitle_dialog"
+        android:layout_width="match_parent"
+        android:id="@+id/recy"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/close"
+
+        android:layout_width="40dp"
+        android:background="@drawable/shape_circle_ws"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/recy"
+        android:layout_marginTop="35dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:src="@drawable/icon_close_white_20"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

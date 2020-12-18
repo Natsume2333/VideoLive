@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"
+        android:textColor="#323232"
+        android:text="所有用户"
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <View
+        android:background="@drawable/charge_sel"
+        android:id="@+id/right"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        />
+
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/right"
+        android:layout_marginLeft="10dp"
+        android:textSize="14dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#646464"
+        android:text="20魔豆/分钟"
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_grey_color_d9d9d9"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

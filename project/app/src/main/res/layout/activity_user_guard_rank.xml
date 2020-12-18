@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guard_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#341854"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_marginTop="50dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/guard_bg" />
+
+
+        <View
+            android:id="@+id/center"
+            android:layout_width="203dp"
+            android:layout_height="88dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:background="@mipmap/guard_title" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content_list"
+            style="@style/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_guard_list"
+            android:padding="10dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@+id/guard_icon"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/guard_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simple"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/guard_gxz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贡献值"
+                android:textColor="#FFCE1B"
+                android:textSize="10dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/guard_buy"
+            android:layout_width="74dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_guard_bt"
+            android:gravity="center"
+            android:text="购买"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/guard_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_user_home_rank" />
+
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/title_trans" />
+
+
+</RelativeLayout>

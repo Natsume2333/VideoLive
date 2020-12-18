@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FFCE1B</color>
+
+    <color name="admin_color">#FFCE1B</color>
+    <color name="admin_color_no1">#5fFF4081</color>
+    <color name="admin_color_no2">#2fFF4081</color>
+
+    <color name="white_bg">#F5F5F5</color>
+
+    <color name="noColor">#00000000</color>
+
+    <color name="track_matte">#7f000000</color>
+
+    <!-- 常用颜色值 -->
+    <color name="maintone">#FFD350</color>
+    <color name="maintone_no1">#5fFFD350</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="gray_black">#323232</color>
+    <color name="light_gray3">#CCCCCC</color>
+
+    <color name="light_gray_no">#60CCCCCC</color>
+
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="green">#008000</color>
+    <color name="orange">#FFA500</color>
+    <color name="graywhite">#F5F5F5</color>
+    <color name="lightblue">#0083FF</color>
+
+
+    <color name="main_background">#1fCCCCCC</color>
+
+    <color name="transparent">#00000000</color>
+
+    <!--文字白色-->
+    <color name="colorTextWhite">#FFFFFF</color>
+    <!--文字G1-->
+    <color name="colorTextG1">#CCCCCC</color>
+    <!--文字G2-->
+    <!--文字G3-->
+    <!--文字G4-->
+    <!--文字black-->
+    <!--gray1-->
+    <color name="colorGray1">#F0F0F0</color>
+    <!--light gray-->
+    <!--gray2-->
+    <color name="colorGray2">#DCDCDC</color>
+    <!--gray3-->
+    <color name="colorGray3">#C8C8C8</color>
+    <!--gray4-->
+    <color name="colorGray4">#787878</color>
+    <!--gray5-->
+    <color name="colorGray5">#505050</color>
+    <!--gray6-->
+
+
+    <color name="transparent_black">#99000000</color>
+    <color name="transparent_white">#90ffffff</color>
+
+    <color name="split_line_grey_color_d9d9d9">#D9D9D9</color>
+    <color name="gray7">#c5c4c4</color>
+    <color name="color_red_ccfa3c55">#ccfa3c55</color>
+
+    <!-- main bg color -->
+    <color name="main_bg_color">#FFFFFF</color>
+
+    <!-- session -->
+
+    <!-- image picker -->
+    <color name="color_split_line_d9d9d9">#d9d9d9</color>
+
+    <!-- contact -->
+
+    <!-- setting -->
+
+    <color name="private_photo_auth_bg">#60666666</color>
+
+    <color name="gift_msg_color">#FF4081</color>
+
+    <color name="horvoice_text_color">#ff9c00</color>
+    <color name="color_666666">#666666</color>
+
+
+    <color name="main_tab_unsel">@color/black</color>
+    <color name="main_tab_sel">@color/black</color>
+
+</resources>

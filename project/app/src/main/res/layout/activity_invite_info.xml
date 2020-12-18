@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".ui.WealthDetailedActivity">
+
+    <include layout="@layout/title_trans_black"/>
+
+    <RelativeLayout
+        android:id="@+id/fm"
+        android:paddingTop="5dp"
+        android:background="@drawable/bg_topr5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.moxin.videoline.ui.NavigationTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:nts_active_color="@color/black"
+            app:nts_color="@color/black"
+            app:nts_corners_radius="1.5dp"
+            app:nts_factor="1.2"
+            app:nts_inactive_color="@color/gray7"
+            app:nts_weight="3dp"
+            app:nts_animation_duration="200"
+            app:nts_size="15dp"
+
+            />
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_below="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

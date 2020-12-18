@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pair_item_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/im_left_menu_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/default_avatar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/im_left_menu_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="22222222222"
+            android:id="@+id/right_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#323232" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/right_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#747474" />
+
+        <TextView
+            android:text="1111111"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_item_last_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#747474"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#f5f5f5" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

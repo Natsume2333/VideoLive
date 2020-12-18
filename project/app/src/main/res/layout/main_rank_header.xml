@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:background="@drawable/bg_whitle_tr5">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/holder_noimg"
+                    android:id="@+id/rk_icon_1"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#323232"
+                    android:layout_marginTop="10dp"
+                    android:text="name"
+                    android:id="@+id/rk_name1"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp">
+
+
+                    <TextView
+                        android:id="@+id/rk_vip_man1"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/man_vip_bac"
+                        android:textSize="8dp"
+                        android:textColor="@color/black"
+                        android:text="10"
+                        android:paddingBottom="2dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/rk_vip_woman1"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/woman_vip_bac"
+                        android:textSize="8dp"
+                        android:textColor="@color/white"
+                        android:text="10"
+                        android:visibility="gone"
+                        android:paddingTop="3dp"
+                        android:gravity="center"
+                        />
+
+
+
+                    <View
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="10dp"
+                        android:layout_height="13dp"
+                        android:background="@mipmap/address"
+                        />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="11dp"
+                        android:text="泰山"
+                        android:id="@+id/rk_address1"
+                        android:layout_marginLeft="5dp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/coin_image"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/admin_color"
+                        android:textSize="15dp"
+                        android:text="1024"
+                        android:id="@+id/rk_coin1"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+<!--2-->
+        <LinearLayout
+            android:layout_toLeftOf="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:id="@+id/left"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:background="@drawable/shape_rank_l">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/holder_noimg"
+                    android:id="@+id/rk_icon_2"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#323232"
+                    android:layout_marginTop="5dp"
+                    android:text="name"
+                    android:id="@+id/rk_name2"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp">
+
+
+                    <TextView
+                        android:id="@+id/rk_vip_man2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/man_vip_bac"
+                        android:textSize="8dp"
+                        android:textColor="@color/black"
+                        android:text="10"
+                        android:paddingBottom="2dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/rk_vip_woman2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/woman_vip_bac"
+                        android:textSize="8dp"
+                        android:textColor="@color/white"
+                        android:text="10"
+                        android:visibility="gone"
+                        android:paddingTop="3dp"
+                        android:gravity="center"
+                        />
+
+
+
+                    <View
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="10dp"
+                        android:layout_height="13dp"
+                        android:background="@mipmap/address"
+                        />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="11dp"
+                        android:text="泰山"
+                        android:id="@+id/rk_address2"
+                        android:layout_marginLeft="5dp"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/coin_image"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/admin_color"
+                        android:textSize="15dp"
+                        android:text="1024"
+                        android:id="@+id/rk_coin2"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <!--3-->
+        <LinearLayout
+            android:layout_toRightOf="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:id="@+id/right"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+
+                android:background="@drawable/shape_rank_r">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/rk_icon_3"
+                    android:src="@mipmap/holder_noimg"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="#323232"
+                    android:layout_marginTop="5dp"
+                    android:text="name"
+                    android:id="@+id/rk_name3"
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp">
+
+
+                    <TextView
+                        android:id="@+id/rk_vip_man3"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/man_vip_bac"
+                        android:textSize="8dp"
+                        android:textColor="@color/black"
+                        android:text="10"
+                        android:paddingBottom="2dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/rk_vip_woman3"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@mipmap/woman_vip_bac"
+                        android:textSize="8dp"
+                        android:textColor="@color/white"
+                        android:text="10"
+                        android:visibility="gone"
+                        android:paddingTop="3dp"
+                        android:gravity="center"
+                        />
+
+
+
+                    <View
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="10dp"
+                        android:layout_height="13dp"
+                        android:background="@mipmap/address"
+                        />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="11dp"
+                        android:text="泰山"
+                        android:id="@+id/rk_address3"
+                        android:layout_marginLeft="5dp"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/coin_image"
+                        />
+
+                    <TextView
+                        android:id="@+id/rk_coin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/admin_color"
+                        android:textSize="15dp"
+                        android:text="1024"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="112dp"
+            android:background="@mipmap/yinying_left"
+            android:layout_toLeftOf="@+id/center"
+            android:layout_marginTop="65dp"
+            />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="112dp"
+            android:background="@mipmap/yinying_right"
+            android:layout_toRightOf="@+id/center"
+            android:layout_marginTop="65dp"
+            />
+
+
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+
+
+
+</RelativeLayout>

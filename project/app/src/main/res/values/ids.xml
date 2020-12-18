@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="left_btn" type="id"/>
+    <item name="right_btn" type="id"/>
+
+    <item name="prize_to_upload" type="id"/>
+
+    <item name="mine_ed" type="id"/>
+
+    <item name="msg_left_btn" type="id"/>
+
+    <item name="msg_right_btn" type="id"/>
+
+    <item name="redact_savebtn" type="id"/>
+
+    <item name="redact_backbtn" type="id"/>
+
+    <item name="all_backbtn" type="id"/>
+
+    <item name="sett_login_out" type="id"/>
+
+    <item name="sett_black" type="id"/>
+
+    <item name="sett_custom_video_coin" type="id"/>
+
+    <item name="sett_about_me" type="id"/>
+
+    <item name="sett_switch_language" type="id"/>
+
+    <item name="upload_log" type="id"/>
+
+    <item name="wealth_split" type="id"/>
+
+    <item name="wealth_cash" type="id"/>
+
+    <item name="custom_qq" type="id"/>
+
+    <item name="wealth_recharge" type="id"/>
+
+    <item name="auth_user_nickname" type="id"/>
+
+    <item name="auth_bind_phone" type="id"/>
+
+    <item name="auth_user_weight" type="id"/>
+
+    <item name="auth_user_height" type="id"/>
+
+    <item name="auth_user_constellation" type="id"/>
+
+    <item name="auth_image_label" type="id"/>
+
+    <item name="auth_self_label" type="id"/>
+
+    <item name="auth_introduce" type="id"/>
+
+    <item name="auth_city" type="id"/>
+
+    <item name="feed_back" type="id"/>
+
+    <item name="set_custom_say_hi_msg" type="id"/>
+
+    <item name="setting_contact" type="id"/>
+</resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/admin_color"
+    android:id="@+id/title"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/icon_back_black"
+            android:textColor="@color/colorGray4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布动态"
+            android:textSize="15dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_push"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="发布"
+            android:textSize="13dp"
+            android:textColor="#4C4723" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_top_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_topr5"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_input"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rl_top_content"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:hint="此刻想说的是"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="300"
+            android:textSize="11dp"
+            android:textColor="@color/colorGray4" />
+
+
+        <CheckBox
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:checked="true"
+            android:text="发布位置 泰安"
+            android:textSize="11dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_add_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_input">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="never" />
+
+    </RelativeLayout>
+
+
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/btn_add_img"-->
+            <!--android:gravity="center"-->
+            <!--android:background="@drawable/gift_sendgift_normal_drawable"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_height="30dp">-->
+
+
+            <!--<TextView-->
+                <!--android:layout_width="10dp"-->
+                <!--android:layout_height="10dp"-->
+                <!--android:background="@drawable/add_icon"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:layout_marginLeft="2dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="#323232"-->
+                <!--android:textSize="10dp"-->
+                <!--android:text="添加图片"-->
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+
+        <LinearLayout
+            android:id="@+id/btn_video_record"
+            android:gravity="center"
+            android:background="@drawable/gift_sendgift_normal_drawable"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="30dp">
+
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/add_icon"
+                />
+
+            <TextView
+                android:id="@+id/bt_hint"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#323232"
+                android:textSize="10dp"
+                android:text="上传视频"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/btn_voice_record"
+            android:gravity="center"
+            android:background="@drawable/gift_sendgift_normal_drawable"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="30dp">
+
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/add_icon"
+                />
+
+            <TextView
+                android:id="@+id/voice_hint"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#323232"
+                android:textSize="10dp"
+                android:text="添加音频"
+                />
+
+        </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_add_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="  添加图片不超过9张，文字备注不超过300字"
+        android:textColor="@color/colorGray3"
+        android:textSize="@dimen/text_size_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mark"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <com.moxin.videoline.audiorecord.view.CommonSoundItemView
+            android:id="@+id/pp_sound_item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_voice_record"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@color/admin_color"-->
+            <!--android:text="录制音频"-->
+            <!--android:textColor="@color/white" />-->
+
+        <!--<Button-->
+            <!---->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@color/admin_color"-->
+            <!--android:text="上传视频"-->
+            <!--android:textColor="@color/white" />-->
+
+
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

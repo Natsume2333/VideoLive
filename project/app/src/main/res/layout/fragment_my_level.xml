@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_black_r5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="84dp"
+            android:background="@mipmap/icon_levelb"
+            android:layout_height="76dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:text="V3"
+                android:id="@+id/top_level"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="当前等级:V3   距离V4还差: 129"
+            android:textSize="13dp"
+            android:id="@+id/hint_level"
+            />
+
+
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/v_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/admin_color"
+                android:text="V3"
+                />
+
+            <ProgressBar
+                android:id="@+id/level_pb"
+                android:layout_toRightOf="@+id/v_l"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:progress="50"
+                android:max="100"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/v_r"
+                />
+
+
+
+            <TextView
+                android:id="@+id/v_r"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#BAB9B9"
+                android:text="V4"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1px"
+            android:background="@color/split_line_grey_color_d9d9d9"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="等级要求"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1px"
+            android:background="@color/split_line_grey_color_d9d9d9"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/bg_whitle_dialog"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="#909090"
+                android:textSize="14dp"
+                android:text="等级"
+                android:layout_height="wrap_content" />
+
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content">
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:textColor="#909090"
+                   android:textSize="14dp"
+                   android:text="充值金额"
+                   android:layout_height="wrap_content" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:textColor="#909090"
+                   android:textSize="10dp"
+                   android:text="(前六日加当日之和)"
+                   android:layout_height="wrap_content" />
+
+
+
+           </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/list"
+            style="@style/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

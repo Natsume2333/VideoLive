@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/bg"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:src="@mipmap/bugu_no_head_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="#D79643"
+        android:layout_marginTop="9dp"
+        android:text="免费畅想"
+        />
+    
+    
+</LinearLayout>

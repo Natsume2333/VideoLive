@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ContactSettingActivity">
+
+
+    <RelativeLayout style="@style/contact_item_rl_style">
+
+        <TextView
+            style="@style/contact_item_text_style"
+            android:text="微信账号" />
+
+        <EditText
+            android:id="@+id/contact_wechat_num_et"
+            style="@style/contact_item_text_hint_style"
+            android:hint="请输入微信账号" />
+    </RelativeLayout>
+
+    <View style="@style/contact_item_line_style" />
+
+    <RelativeLayout style="@style/contact_item_rl_style">
+
+        <TextView
+            style="@style/contact_item_text_style"
+            android:text="微信账号价格" />
+
+        <EditText
+            android:id="@+id/contact_wechat_num_price_et"
+            style="@style/contact_item_text_hint_style"
+            android:hint="0"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <View style="@style/contact_item_line_style" />
+
+    <RelativeLayout style="@style/contact_item_rl_style">
+
+        <TextView
+            style="@style/contact_item_text_style"
+            android:text="QQ账号" />
+
+        <EditText
+            android:id="@+id/contact_qq_num_et"
+            style="@style/contact_item_text_hint_style"
+            android:hint="请输入QQ账号" />
+    </RelativeLayout>
+
+    <View style="@style/contact_item_line_style" />
+
+    <RelativeLayout style="@style/contact_item_rl_style">
+
+        <TextView
+            style="@style/contact_item_text_style"
+            android:text="QQ账号价格" />
+
+        <EditText
+            android:id="@+id/contact_qq_num_price_et"
+            style="@style/contact_item_text_hint_style"
+            android:hint="0"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <View style="@style/contact_item_line_style" />
+
+    <RelativeLayout style="@style/contact_item_rl_style">
+
+        <TextView
+            style="@style/contact_item_text_style"
+            android:text="手机号码" />
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/contact_phone_num_et"
+            style="@style/contact_item_text_hint_style"
+            android:hint="请输入手机号码" />
+    </RelativeLayout>
+
+    <View style="@style/contact_item_line_style" />
+
+    <RelativeLayout style="@style/contact_item_rl_style">
+
+        <TextView
+            style="@style/contact_item_text_style"
+            android:text="手机号码价格" />
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/contact_phone_num_price_et"
+            style="@style/contact_item_text_hint_style"
+            android:hint="0" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/contact_upload_contact_info_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/yellow_fifty_corners_bac"
+        android:gravity="center"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:text="提交" />
+
+</LinearLayout>

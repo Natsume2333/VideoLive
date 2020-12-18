@@ -1,0 +1,222 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'bugly'
+//apply plugin: "com.mob.sdk"
+
+bugly {
+    appId = "1400068304"
+    appKey = "841980f9-1d7e-4bd2-af79-409dc4417c0a"
+}
+
+android {
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.moxin.videoline"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构
+            //abiFilters "armeabi-v7a", "x86","arm64-v8a","x86_64"
+            abiFilters 'armeabi-v7a'
+        }
+
+        //--- boGoBeauty start ---
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//                arguments "-DANDROID_STL=c++_shared"
+//                abiFilters 'armeabi-v7a'
+//            }
+//
+//        }
+        // --- boGoBeauty end ---
+        flavorDimensions "versionCode"
+    }
+
+    //签名
+    signingConfigs {
+        release {
+            storeFile file("../../android-jks/com.moxin.videoline.jks")
+            storePassword "keys.moxin.app"
+            keyAlias "key0.moxin"
+            keyPassword "key0.moxin.200725"
+        }
+        debug {
+            storeFile file('../../android-jks/com.moxin.videoline.jks')
+            storePassword 'keys.moxin.app'
+            keyAlias = 'key0.moxin'
+            keyPassword 'key0.moxin.200725'
+        }
+    }
+
+    // --- boGoBeauty start ---
+//    externalNativeBuild {
+//        cmake {
+//            path file('CMakeLists.txt')
+//        }
+//    }
+    // --- boGoBeauty end ---
+
+    buildTypes {
+
+        debug {
+            zipAlignEnabled false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            shrinkResources false
+            zipAlignEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    //http://shiyu.xzkj518.com
+    productFlavors {
+
+        moxin {
+            applicationId "com.moxin.videoline"
+            versionCode 2020081704
+            versionName "3.2"
+            buildConfigField 'String', 'SERVER_URL', '"http://myufuyanpro.vip3gz.idcfengye.com/"'
+            targetSdkVersion 26
+            minSdkVersion 22
+            applicationIdSuffix = 'Release'
+            signingConfig signingConfigs.release
+        }
+
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs/upload')
+
+    //布谷科技美颜SDK
+    implementation project(':beauty')
+    implementation project(':imagelibrary')
+    implementation project(':timPresentation')
+    implementation project(':timImUI')
+    implementation project(':utilcode')
+
+    implementation(name: 'LiteAVSDK_UGC_3.5.2170', ext: 'aar')
+    implementation files('libs/MobCommons-2018.0523.1925.jar')
+    implementation files('libs/MobTools-2018.0523.1923.jar')
+    implementation files('libs/ShareSDK-Core-3.2.0.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-3.2.0.jar')
+    implementation files('libs/ShareSDK-Wechat-Favorite-3.2.0.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-3.2.0.jar')
+    implementation files('libs/ShareSDK-Wechat-3.2.0.jar')
+    implementation files('libs/OpenInstall_v2.2.0 2.jar')
+    implementation files('libs/ShareSDK-QQ-3.2.1.jar')
+    implementation files('libs/ShareSDK-QZone-3.2.1.jar')
+    implementation files('libs/ShareSDK-Facebook-3.2.1.jar')
+    implementation files('libs/AMap_Location_V4.2.0_20180809.jar')
+    implementation files('libs/alipaySdk-20180316.jar')
+
+
+//    annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //轮播库
+    implementation 'com.qmuiteam:qmui:1.0.6'
+    //QMUI库
+    implementation 'com.lzy.net:okgo:2.1.4'
+    //OKGO库
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    //文本输入框库
+    implementation 'com.alibaba:fastjson:1.2.44'
+    implementation 'me.grantland:autofittextview:0.2.+'
+    //数据库操作库
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //分包
+    implementation 'com.android.support:multidex:1.0.1'
+    //recycleView
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.2.2'
+
+    implementation 'com.idescout.sql:sqlscout-server:4.0'
+    implementation 'com.android.support:cardview-v7:27.1.0'
+    implementation 'com.sunfusheng:marqueeview:1.3.3'
+    //毛玻璃
+    implementation 'jp.wasabeef:glide-transformations:3.1.1'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    implementation 'com.umeng.sdk:common:1.5.0'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖。2020.09.02.zad
+    //compile 'com.umeng.sdk:utdid:1.1.5.3'
+    //PushSDK
+    implementation 'com.umeng.sdk:push:4.1.0'
+    //umeng推送
+    implementation 'com.umeng.sdk:analytics:7.5.0'
+    implementation 'com.google.zxing:core:3.3.0'
+    //权限
+    compile 'com.github.jokermonn:permissions4m:2.1.0-lib'
+    annotationProcessor 'com.github.jokermonn:permissions4m:2.1.0-processor'
+    implementation('cn.qqtheme.framework:WheelPicker:1.5.6') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.github.castorflex.verticalviewpager:library:19.0.1'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.zhy:percent-support-extends:1.1.1'
+    implementation 'com.qiniu:qiniu-android-sdk:7.2.+'
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation('com.github.bumptech.glide:glide:4.6.1') { // 所加的第三方框架
+        exclude group: 'com.github.bumptech.glide', module: 'glide'     // 加载时排除框架中的design包
+    }
+    implementation 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
+    //dialog
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.facebook.rebound:rebound:0.3.8'
+
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    implementation 'com.contrarywind:Android-PickerView:4.1.7'
+
+    implementation 'com.android.support:design:27.1.0'
+
+    implementation 'com.github.xiaohaibin:XBanner:1.7.0'
+
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v1.1.0'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.moxin.videoline.dao'
+    targetGenDir 'src/main/java'
+}

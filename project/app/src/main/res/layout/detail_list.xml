@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+    
+
+
+        <LinearLayout
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="@color/admin_color"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/sel_date"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="28dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="07"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/month_num"
+                    />
+
+
+                <TextView
+                    android:alpha="0.8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    android:text="2019年"
+                    android:id="@+id/year_num"
+                    android:layout_above="@+id/month_num"
+                    />
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/month_num"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:text="月"
+                        android:layout_toRightOf="@+id/month_num"
+                        android:layout_alignParentBottom="true"
+                        />
+
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/arrow_down"
+                        />
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:alpha="0.5"
+                />
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/white"
+                    android:alpha="0.8"
+                    android:id="@+id/type"
+                    android:text="支出金额"
+                    />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="0"
+
+                    android:id="@+id/all_coin"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/sw_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content_list"
+            style="@style/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

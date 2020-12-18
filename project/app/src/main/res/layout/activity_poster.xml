@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PosterActivity">
+
+    <com.stx.xhb.xbanner.XBanner
+        android:id="@+id/mSharePagerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/share_poster_rl"
+        android:scaleType="centerCrop"
+        app:isAutoPlay="false"
+        app:isClipChildrenMode="true"
+        app:isClipChildrenModeLessThree="true"
+        app:isHandLoop="false"
+        app:isShowIndicatorOnlyOne="false"
+        app:pointsVisibility="false"
+        app:viewPagerClipChildren="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/share_poster_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.moxin.videoline.ui.dialog.InviteShareView
+            android:id="@+id/share_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/share_poster_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/yellow_fifty_corners_bac"
+            android:gravity="center"
+            android:text="分享我的海报"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

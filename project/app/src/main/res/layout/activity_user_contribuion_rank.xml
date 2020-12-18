@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@mipmap/rank_cour_header"
+            app:layout_heightPercent="45%w"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/gxb"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            app:layout_heightPercent="35%w"
+            android:layout_height="200dp">
+
+
+            <View
+                android:layout_width="91dp"
+                android:layout_height="28dp"
+
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="50dp"
+                android:background="@mipmap/rank_gxb"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content_list"
+            android:layout_below="@+id/gxb"
+            style="@style/scroll_view"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_gray_dialog"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+
+</LinearLayout>
+
+
+    <include layout="@layout/title_trans" />
+</RelativeLayout>

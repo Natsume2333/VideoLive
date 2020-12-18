@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.moxin.videoline.widget.RoundRectLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_all_rrl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp">
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/fiv"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="#E2E2E2" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_del"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@mipmap/friend_edit_img_delete" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:src="@mipmap/friend_edit_add_img_bac" />
+
+
+    </RelativeLayout>
+</com.moxin.videoline.widget.RoundRectLayout>

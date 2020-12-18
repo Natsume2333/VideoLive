@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/transparent"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:background="@drawable/bg_whitle_tr5"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="130dp">
+
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/hint"
+                android:textColor="#646464"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您当前魔豆余额为"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/ye"
+                android:textColor="#FF3366"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:orientation="horizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#909090"
+                android:text="放弃"
+                android:id="@+id/cancel"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/cz"
+                android:gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFCE1B"
+                android:text="去充值"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:paddingRight="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <View
+
+        android:layout_width="101dp"
+        android:layout_height="69dp"
+        android:background="@mipmap/no_much"
+        />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

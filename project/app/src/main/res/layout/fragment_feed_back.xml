@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_whitle_tr5"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="@string/feed_back"
+            android:maxLength="100"
+            android:minHeight="180dp"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ed"
+            android:layout_alignParentRight="true"
+            android:text="0/100"
+            android:textColor="#909090"
+            android:textSize="11dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_whitle_tr5"
+        android:padding="10dp">
+
+        <!--<ImageView-->
+        <!--android:background="@drawable/bg_gray_st"-->
+        <!--android:padding="13dp"-->
+        <!--android:src="@drawable/camera_icon"-->
+        <!--android:layout_width="55dp"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_whitle_tr5"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp">
+
+
+        <TextView
+            android:id="@+id/l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="联系方式"
+            android:textColor="#646464"
+            android:textSize="13dp" />
+
+
+        <EditText
+            android:id="@+id/tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/l"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="请输入手机号"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_main_btn"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>
